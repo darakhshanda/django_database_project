@@ -4,11 +4,10 @@ WordQuest
 {% endblock %}
 
 {% block content %}
-
+<p><a href="/">HOME</a></p>
 <h2>Players</h2>
 <ul>
     {% for x in myplayers %}
-
     <li><a href="details/{{x.id}}"> {{x.id}} {{x.firstname}} {{x.lastname}}</a></li>
     {% endfor %}
 </ul>

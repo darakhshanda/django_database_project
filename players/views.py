@@ -1,8 +1,7 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 
-from players.models import Player
+from .models import Player
 # Create your views here.
 
 # The members view does the following:
@@ -30,3 +29,8 @@ def details(request, id):
         'myplayer': myplayer,
     }
     return HttpResponse(template.render(context, request))
+
+
+def main(request):
+    template = loader.get_template('main.html')
+    return HttpResponse(template.render())

@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+{% block title %}
+<title>Details</title>
+{% endblock %}
+
+{% block content %}
+<div>
+    <h3>{{ myplayer.firstname }} {{ myplayer.lastname }}</h3>
+    <p> Username: {{ myplayer.username }}</p>
+    <p> Age: {{ myplayer.age }}</p>
+
+
+    <p>Back to <a href="/players/">players</a></p>
+
+</div>
+{% endblock %}

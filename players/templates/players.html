@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "master.html" %}
+{% block title %}
+WordQuest
+{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordQuest</title>
-</head>
+{% block content %}
 
-<body>
-    <h1>Hello World!</h1>
-    <p>Welcome to my first Django project!</p>
-</body>
+<h2>Players</h2>
+<ul>
+    {% for x in myplayers %}
 
-</html>
+    <li><a href="details/{{x.id}}"> {{x.id}} {{x.firstname}} {{x.lastname}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
